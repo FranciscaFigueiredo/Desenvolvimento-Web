@@ -44,4 +44,45 @@ body {
     width: 940px;
 }
 
+.busca,
+.menu-departamentos {
+    float: left;
+    background-color: #DCDCDC;
+    font-weight: bold;
+    text-transform: uppercase;
 
+    margin-right: 10px;
+    width: 240px;s
+}
+
+.busca input[type=search] {
+    width: 170px;
+}
+
+.busca,
+.busca form,
+.menu-departamentos h2 {
+    margin: 10px;
+}
+
+
+.menu-departamentos li {
+    clear: left;
+    background-color: white;
+    margin-bottom: 1px;
+    padding: 5px 10px;
+}
+
+.menu-departamentos a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.destaque {
+    margin-top: 10px;
+}
+
+.menu-departamentos {
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
