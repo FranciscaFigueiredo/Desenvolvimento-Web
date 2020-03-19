@@ -24,8 +24,12 @@ header {
     font-size: 15px;
 }
 
-.menu-opcoes a {
+.menu-opcoes a:hover {
     color: #003366;
+}
+
+.menu-opcoes a:active {
+    color: #79aee2;
 }
 
 .menu-opcoes {
@@ -41,11 +45,11 @@ body {
 
 .container {
     margin: 0 auto;
-    width: 1000px;
+    width: 1100px;
 }
 
 .busca {
-    background-color: #DCDCDC;
+    background-color: rgb(247, 242, 242);
     font-weight: bold;
     text-transform: uppercase;
 
@@ -55,7 +59,7 @@ body {
 }
 
 .menu-departamentos {
-    background-color: #DCDCDC;
+    background-color: rgb(233, 231, 231);
     font-weight: bold;
     text-transform: uppercase;
 
@@ -75,7 +79,7 @@ body {
 }
 
 .menu-departamentos h2 {
-    margin: 5px 1px -5px 10px;
+    margin: 5px 1px -5px 5px;
 }
 
 .busca form {
@@ -88,6 +92,7 @@ body {
     padding: 5px 10px;
     margin-left: -40px;
     list-style: none;
+    position: relative;
 }
 
 .menu-departamentos a {
@@ -124,7 +129,7 @@ body {
 
 .menu-departamentos {
     clear: left;
-    margin-top: 20px;
+    margin-top: -10px;
     padding-bottom: 10px;
     margin-left: 5px;
     height: 260px;
@@ -141,9 +146,9 @@ body {
 }
 
 .painel {
-    margin: 1px 0px;
+    margin: 10px 12px;
     padding: 10px;
-    width: 450px;
+    width: 500px;
 }
 
 .novidades {
@@ -158,13 +163,12 @@ body {
 }
 
 .painel li {
-    display: inline block;
+    display: inline-block;
     vertical-align: top;
-    text-align: center;
-    width: 150px;
+    width: 115px;
 
-    margin: 5px;
-    padding-bottom: -10px;
+    margin: 1px -1px 1px 15px;
+    padding-bottom: 1px;
 }
 
 .painel h2 {
@@ -182,9 +186,9 @@ body {
 }
 
 footer {
+    background-image: url(../img/fundo-rodape.png);
     clear: both;
     padding: 20px 0;
-    background-image: url(../img/fundo-rodape.png);
 }
 
 footer .container {
@@ -200,6 +204,7 @@ footer .container {
 .social a {
     height: 32px;
     width: 32px;
+
     display: block;
     text-indent: -9999px;
 }
@@ -219,4 +224,99 @@ footer .container {
 
 .social a[href*="plus.google.com"] {
     background-image: url(../img/googleplus.png);
+}
+
+.menu-departamentos li ul {
+    display: none;
+    position: absolute;
+}
+.menu-departamentos li:hover ul{
+    display: block;
+}
+
+.menu-departamentos ul ul{
+    display: none;
+    left: 100%;
+    position: relative;
+}
+
+.menu-departamentos ul ul li {
+    background-color: #DCDCDC;
+    position: relative;
+}
+
+.painel li:hover {
+    transform: scale(1.2) rotate(-5deg);
+}
+
+.painel li:nth-child(2n):hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.painel li {
+    transition: 0.7s ease-out;
+}
+
+/*Parte mobile*/
+@media (max-width: 939px) {
+    .container {
+        width: 96%;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    header h1 img {
+        max-width: 50%;
+    }
+
+    .sacola {
+        display: none;
+    }
+
+    .menu-opcoes {
+        position: static;
+        text-align: center;
+    }
+
+    .menu-opcoes ul li {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .banner-destaque {
+        width: 96%;
+    }
+
+    .busca,
+    .menu-departamentos {
+        margin: 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .banner-destaque img {
+        margin: 10px;
+        width: 100%;
+    }
+
+    .painel {
+        float: none;
+        width: 100%;
+    }
+
+    .painel li {
+        width: 30%;
+    }
+
+    .painel img {
+        width: 100%;
+    }
+
+    .novidades,
+    .mais-vendidos {
+        position: static;
+        margin: 10px -10px;
+    }
 }
